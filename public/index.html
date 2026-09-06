@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vape development environment" />
+    <title>Vape</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; background: #111311; color: #f2f0e9; font-family: Inter, Helvetica, Arial, sans-serif; }
+      .shell { min-height: 100vh; display: flex; flex-direction: column; padding: 32px clamp(24px, 5vw, 72px); }
+      header { display: flex; align-items: center; justify-content: space-between; }
+      .brand { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+      .mark { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #6e756a; border-radius: 50%; color: #a8d46f; }
+      .status { display: flex; align-items: center; gap: 9px; color: #b9bcb5; font: 12px 'Courier New', monospace; text-transform: uppercase; letter-spacing: .08em; }
+      .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #a8d46f; box-shadow: 0 0 0 4px rgb(168 212 111 / 12%); }
+      main { width: 100%; max-width: 1160px; margin: auto; padding: 96px 0; }
+      .eyebrow { margin: 0 0 24px; color: #a8d46f; font: 500 12px 'Courier New', monospace; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { max-width: 860px; margin: 0; font-size: clamp(54px, 8.7vw, 126px); font-weight: 600; line-height: .9; letter-spacing: -.065em; }
+      h1 span { color: #7d827a; }
+      .details { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 390px); gap: 48px; margin-top: 72px; padding-top: 28px; border-top: 1px solid #30342f; }
+      .details > p { max-width: 530px; margin: 0; color: #a9ada6; font-size: 16px; line-height: 1.75; }
+      dl { display: grid; grid-template-columns: 1fr auto; gap: 13px 32px; margin: 0; font: 12px 'Courier New', monospace; }
+      dt { color: #737871; text-transform: uppercase; }
+      dd { margin: 0; color: #d7dad2; text-align: right; }
+      footer { display: flex; justify-content: space-between; color: #6f746d; font: 11px 'Courier New', monospace; letter-spacing: .08em; text-transform: uppercase; }
+
+      @media (max-width: 700px) {
+        .shell { padding: 24px; }
+        main { padding: 72px 0; }
+        h1 { font-size: clamp(52px, 17vw, 84px); }
+        .details { grid-template-columns: 1fr; margin-top: 48px; }
+        footer span:last-child { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <div class="brand"><span class="mark">V</span> Vape</div>
+        <div class="status"><span class="status-dot"></span> Environment live</div>
+      </header>
+      <main>
+        <p class="eyebrow">Alloy development workspace / 001</p>
+        <h1>Ready to <span>build.</span></h1>
+        <div class="details">
+          <p>
+            A clean starting point for Vape. The containerized development environment is online,
+            health-checked, and ready for the product to take shape.
+          </p>
+          <dl>
+            <dt>Runtime</dt><dd>Node 22</dd>
+            <dt>Service</dt><dd>Healthy</dd>
+            <dt>Port</dt><dd>3000</dd>
+          </dl>
+        </div>
+      </main>
+      <footer><span>Vape / 2026</span><span>Development build</span></footer>
+    </div>
+  </body>
+</html>
